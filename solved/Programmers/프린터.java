@@ -18,8 +18,7 @@ class Solution {
             Task now = q.poll();
             if(now.prio == max){
                 if(now.num == location){
-                    answer = n;
-                    break;
+                    return n;
                 }
                 max = pq.poll();
                 n++;
@@ -27,7 +26,6 @@ class Solution {
                 q.offer(now);
             }
         }
-        return answer;
     }
     
     class Task implements Comparable<Task>{
