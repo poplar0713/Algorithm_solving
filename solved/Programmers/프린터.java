@@ -2,18 +2,18 @@ import java.util.*;
 
 class Solution {
     public int solution(int[] priorities, int location) {
-        PriorityQueue<Task> pq = new PriorityQueue<>();
+        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
         Queue<Task> q = new LinkedList<Task>();
         
         int answer = 0;
         for(int i = 0; i < priorities.length; i++){
             Task t = new Task(i, priorities[i]);
-            pq.offer(t);
+            pq.offer(priorities[i]);
             q.offer(t);
         }
         
         int n = 1;
-        int max = pq.poll().prio;
+        int max = pq.poll();
         while(true){
             Task now = q.poll();
             if(now.prio == max){
@@ -21,7 +21,7 @@ class Solution {
                     answer = n;
                     break;
                 }
-                max = pq.poll().prio;
+                max = pq.poll();
                 n++;
             } else {
                 q.offer(now);
