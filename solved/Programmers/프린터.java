@@ -4,8 +4,6 @@ class Solution {
     public int solution(int[] priorities, int location) {
         PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
         Queue<Task> q = new LinkedList<Task>();
-        
-        int answer = 0;
         for(int i = 0; i < priorities.length; i++){
             Task t = new Task(i, priorities[i]);
             pq.offer(priorities[i]);
