@@ -2,8 +2,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.StringTokenizer;
 
-import javax.swing.text.html.HTMLDocument.Iterator;
-
 //https://programmers.co.kr/learn/courses/30/lessons/92334
 //[프로그래머스] 신고 결과 받기
 public class Solution {
