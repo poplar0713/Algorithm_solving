@@ -10,11 +10,11 @@ public class Solution {
 	static HashMap<String, Integer> reported_user_count = new HashMap<String, Integer>();
 	
 	public int[] solution(String[] id_list, String[] report, int k) {
-		int [] answer = new int[id_list.length];
+		int[] answer = new int[id_list.length];
 		
-		for(int i = 0; i < id_list.length; i++) {
-			User user = new User(id_list[i]);
-			user_map.put(id_list[i], user);
+		for(String id : id_list) {
+			User user = new User(id);
+			user_map.put(id, user);
 		}
 		
 		for(String s : report) {
